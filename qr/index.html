@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,24 +14,25 @@
 			color: #522816;
 			display: flex;
 			justify-content: center;
-			min-height: 100vh;
 			text-align: left;
 		}
 
 		.container {
 			max-width: 600px;
 			padding: 40px 20px;
+			word-break: keep-all;
+			overflow-wrap: break-word;
 		}
 
 		h1 {
-			font-size: 3em;
+			font-size: 2.8em;
 			margin-bottom: 0.5em;
 		}
 
 		p {
-			font-size: 1.5em;
+			font-size: 1.4em;
 			line-height: 1.6;
-			margin-bottom: 2em;
+			margin: 0.65em 0;
 		}
 
 		.button {
@@ -41,18 +43,20 @@
 			padding: 15px 30px;
 			text-decoration: none;
 			border-radius: 6px;
-			margin-bottom: 2em;
+			margin-bottom: 1.2em;
+			margin-top: 1.8em;
 		}
 
-		.gif-placeholder {
-			width: 100%;
-			height: 300px;
-			background-color: rgba(255, 255, 255, 0.2);
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			border: 2px dashed white;
-			font-size: 1.2em;
+		.sub-button {
+			color: #522816c9;
+			font-size: 1.0em;
+			display: block;
+		}
+
+		img {
+			max-width: 100%;
+			height: auto;
+			display: block;
 		}
 
 		@media (max-width: 480px) {
@@ -62,19 +66,19 @@
 		}
 	</style>
 </head>
+
 <body>
 	<div class="container">
 		<h1>어서오십시오!!!</h1>
-		<p>
-			괴물여관 출시 소식을 가장 먼저 듣고싶습니까?<br>
-			아래 스팀 페이지에서 괴물여관을 찜해주십쇼!<br>
-			힘내서 개발하겠습니다! 영차영차~<br>
-			개발자 사일 드림.
-		</p>
+		<p>괴물여관 출시 소식을 가장 먼저 듣고 싶습니까?</p>
+		<p>아래 스팀 페이지에서 괴물여관을 찜해주십쇼!</p>
+		<p>힘내서 개발하겠습니다! 영차영차~</p>
+		<p>개발자 사일 드림.</p>
 
-		<div><a class="button" href="https://s.team/a/2895410" target="_blank">찜하러 가기</a></div>
-
-		<div><img src="../images/kako_animation.gif" alt="괴물 이미지"></div>
+		<div><a class="button" href="https://s.team/a/2895410" target="_blank">찜하러 가기🐥</a></div>
+		<div><a class="sub-button" href="https://x.com/home" target="_blank">개발자 트위터</a></div>
+		<img src="../images/kako_animation.gif" alt="괴물 이미지">
 	</div>
 </body>
+
 </html>
