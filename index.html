@@ -2,25 +2,38 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Sile</title>
+	<link rel="icon" href="logo.png" type="image/png">
 	<style>
+		html {
+			font-size: 16px; /* 루트 폰트 크기 잠금으로 OS/브라우저 글꼴 확대 버그 방지 */
+		}
+		*, *::before, *::after {
+			box-sizing: border-box;
+		}
 		body {
 			font-family: sans-serif;
 			max-width: 1280px;
-			margin: 80px auto;
-			padding: 28px 40px;
-			line-height: 1.6;
+			margin: 0 auto;
+			padding: 6vh 40px;
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			line-height: 1.5;
 			text-align: left;
-			font-size: 16px;
 		}
 		img.logo {
-			width: 160px;
+			width: 150px;
 			height: auto;
 			margin-bottom: 16px;
 		}
 		.main-typo {
-			font-size: 6em;
-			margin: 0.5em 0 0.2em 0;
+			font-size: clamp(2rem, 5.5vw, 4.2rem); /* 타이포그래피 스케일 컴팩트하게 조정 */
+			margin: 0.2em 0 0.4em 0;
+			word-break: keep-all;
+			line-height: 1.4;
 		}
 		.inline-link {
 			color: #000000b5;
@@ -29,8 +42,8 @@
 			display: inline-block;
 			background-color: #111111;
 			color: #ffffff;
-			padding: 18px 36px;
-			font-size: 22px;
+			padding: 16px 32px;
+			font-size: clamp(16px, 1.6vw, 20px);
 			font-weight: 600;
 			text-decoration: none;
 			border-radius: 8px;
@@ -42,7 +55,7 @@
 			background-color: #333333;
 		}
 		.sub-links {
-			font-size: 24px;
+			font-size: clamp(18px, 1.8vw, 21px);
 			color: #000000b5;
 			line-height: 1.8;
 		}
@@ -62,6 +75,54 @@
 			color: #00000055;
 			text-decoration: none;
 			display: inline-block;
+		}
+
+		/* 윈도우 배율 설정 등으로 가용 화면 세로 높이가 좁아진 경우 */
+		@media (max-height: 768px) {
+			body {
+				justify-content: flex-start; /* 콘텐츠 잘림 방지 (스크롤 가능하도록 위쪽 정렬) */
+				padding: 40px 40px;
+			}
+			img.logo {
+				width: 110px;
+				margin-bottom: 12px;
+			}
+			.main-typo {
+				font-size: clamp(1.8rem, 7.5vh, 3.2rem); /* 세로 높이에 비례하여 축소 */
+				margin: 0.1em 0 0.2em 0;
+			}
+			.press-kit-btn {
+				padding: 12px 24px;
+				font-size: 16px;
+				margin-bottom: 16px;
+			}
+			.sub-links {
+				font-size: 17px;
+			}
+		}
+
+		/* 가용 화면 세로 높이가 극도로 좁은 경우 */
+		@media (max-height: 550px) {
+			body {
+				padding: 20px 40px;
+			}
+			img.logo {
+				width: 80px;
+				margin-bottom: 8px;
+			}
+			.main-typo {
+				font-size: clamp(1.5rem, 9vh, 2.2rem);
+				margin: 0.1em 0 0.2em 0;
+			}
+			.press-kit-btn {
+				padding: 10px 20px;
+				font-size: 14px;
+				margin-bottom: 10px;
+			}
+			.sub-links {
+				font-size: 14px;
+				line-height: 1.5;
+			}
 		}
 	</style>
 </head>
