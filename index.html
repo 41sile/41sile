@@ -20,13 +20,48 @@
 		}
 		.main-typo {
 			font-size: 6em;
-			margin: 0.5em 0;
+			margin: 0.5em 0 0.2em 0;
 		}
 		.inline-link {
 			color: #000000b5;
 		}
-		.other-info {
+		.press-kit-btn {
+			display: inline-block;
+			background-color: #111111;
+			color: #ffffff;
+			padding: 18px 36px;
+			font-size: 22px;
+			font-weight: 600;
+			text-decoration: none;
+			border-radius: 8px;
+			margin-top: 0;
+			margin-bottom: 24px;
+			transition: background-color 0.2s ease;
+		}
+		.press-kit-btn:hover {
+			background-color: #333333;
+		}
+		.sub-links {
 			font-size: 24px;
+			color: #000000b5;
+			line-height: 1.8;
+		}
+		.sub-links a {
+			color: inherit;
+			text-decoration: underline;
+			text-underline-offset: 4px;
+		}
+		.sub-links a:hover {
+			color: #000000;
+		}
+		.contact-row {
+			margin-bottom: 8px;
+		}
+		.social-row .sep {
+			margin: 0 8px;
+			color: #00000055;
+			text-decoration: none;
+			display: inline-block;
 		}
 	</style>
 </head>
@@ -36,6 +71,18 @@
 		I’m Sile.<br>
 		Making <a class="inline-link" href="https://s.team/a/2895410" target="_blank">Monsterest</a>, a monster-friendly inn management RPG.
 	</p>
-	<p class="other-info"><strong>Email</strong> sile@sile.to</p>
+	<div class="action-area">
+		<div>
+			<a class="press-kit-btn" href="https://drive.google.com/drive/folders/1zxEwE4AhwEkSb_WxbOduAtxeybGnVJYU?usp=drive_link" target="_blank" rel="noopener">Monsterest Press Kit</a>
+		</div>
+		<div class="sub-links">
+			<div class="contact-row">
+				contact: <a href="mailto:hello@sile.to">hello@sile.to</a>
+			</div>
+			<div class="social-row">
+				<a href="https://x.com/41sile" target="_blank" rel="noopener">X</a><span class="sep">/</span><a href="https://discord.com/invite/vqtf9ajh6r" target="_blank" rel="noopener">Discord</a><span class="sep">/</span><a href="https://www.youtube.com/@41sile" target="_blank" rel="noopener">YouTube</a>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
